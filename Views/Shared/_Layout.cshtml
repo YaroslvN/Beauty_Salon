@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Beauty_Salon</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Beauty_Salon.styles.css" asp-append-version="true" />
+    <style>
+        .card-placeholder {
+            background-color: #e9ecef;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #6c757d;
+        }
+
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        .banner {
+            background-color: #f8f9fa;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: #343a40;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="h3">Логотип</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Меню</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="Products" asp-action="Index">Товары/услуги</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="About" asp-action="Index">О нас</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="Authorization" asp-action="Login">Вход/регистрация</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - Beauty_Salon - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

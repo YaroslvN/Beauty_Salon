@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Вход/Регистрация";
+}
+
+<main id="login" class="container py-4">
+    <section class="mb-4">
+        <h2>Вход</h2>
+        <form>
+            <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="Введите ваш email">
+            </div>
+            <div class="mb-3">
+                <label for="loginPassword" class="form-label">Пароль</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Введите ваш пароль">
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Войти</button>
+                <a class="btn-link" asp-area="" asp-controller="Authorization" asp-action="Registration">Зарегистрироваться</a>
+            </div>
+        </form>
+      
+    </section>
+</main>
