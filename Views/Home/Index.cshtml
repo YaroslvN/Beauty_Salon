@@ -4,7 +4,11 @@
 
 <main id="index" class="container py-4">
     <section class="mb-4">
-        <div class="banner">Баннер: Косметология для вашей красоты</div>
+        <div class="banner">
+            <div class="banner-info">Баннер: Косметология для вашей красоты</div>
+            <img class="banner-img" src="~/Beauty_Salon/wwwroot/images/banner/noiceBackground_2.jpg">
+        </div>
+
     </section>
 
     <section class="mb-4">
@@ -39,25 +43,53 @@
 
     <section class="mb-4">
         <h2>Товары/услуги</h2>
-        <div class="row g-3">
+        <div class="row g-3 card-wrap">
             <div class="col-md-3">
                 <div class="card hover-effect">
-                    <div class="card-placeholder">Услуга 1</div>
+                    <div class="card">
+                        <img src="/images/products/product_6.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a asp-area="" asp-controller="Products" asp-action="Index" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-3">
+                <div class="card hover-effect">
+                    <div class="card">
+                        <img src="/images/products/product_2.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a asp-area="" asp-controller="Products" asp-action="Index" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card hover-effect">
-                    <div class="card-placeholder">Услуга 2</div>
+                    <div class="card">
+                        <img src="/images/products/product_3.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a asp-area="" asp-controller="Products" asp-action="Index" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-3">
+             <div class="col-md-3">
                 <div class="card hover-effect">
-                    <div class="card-placeholder">Услуга 3</div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card hover-effect">
-                    <div class="card-placeholder">Услуга 4</div>
+                    <div class="card">
+                        <img src="/images/products/product_4.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
