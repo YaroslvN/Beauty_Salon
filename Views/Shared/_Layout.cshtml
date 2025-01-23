@@ -22,21 +22,46 @@
             transition: 0.3s;
         }
 
-        .banner {
-            @* background: linear-gradient(to right, #DCE1E7, #CDC9C0, #260E09); *@
-            height: 600px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            color: black;
+       .banner {
+    background: url('images/banner/noiceBackground_4.jpg') no-repeat center center;
+    background-size: cover;
+    height: 600px;
+  }
+  .overlay {
+    z-index: 1;
+  }
+  .container {
+    z-index: 2; /* Содержимое должно быть выше overlay */
+  }
 
+  /* section {
+    height: 100vh;
+  } */
+
+        .bg-opacity-blur {
+            -webkit-backdrop-filter: blur(5px);
+             backdrop-filter: blur(5px);
+             background: rgb(52,58,64, 0.80);
+        }
+
+        #navbar {
+            position: fixed; /* Зафиксируем меню */
+            top: 0; /* Прижмем к верху */
+            width: 100%; /* Растянем на всю ширину */
+            z-index: 1000;
+            transition: top 0.3s; /* Эффект трансформации при выдвижении вниз (и вверх) */
+        }
+
+        body{
+             padding: 0;
+             margin: 0;
+             padding-top: 70px;
         }
 
     </style>
 </head>
 <body>
-    <header class="bg-dark text-white py-3">
+    <header class="bg-opacity-blur text-white py-3" id="navbar">
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="h3">Логотип</h1>
             <nav>
@@ -68,6 +93,10 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

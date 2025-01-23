@@ -41,3 +41,9 @@ img {
  object-fit: cover;
  object-position: 50 50;
 }
+
+.carousel-item img 
+{ 
+  margin: 0; /* Убирает отступы */ 
+  padding: 0; /* Убирает поля */ 
+}
