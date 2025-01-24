@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Beauty_Salon.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .card-placeholder {
             background-color: #e9ecef;
@@ -22,11 +23,20 @@
             transition: 0.3s;
         }
 
-       .banner {
-    background: url('images/banner/noiceBackground_4.jpg') no-repeat center center;
-    background-size: cover;
-    height: 600px;
-  }
+      .banner {
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+        background: url(/images/products/product_6.jpg);
+        background-size: cover;
+        }
+
+        video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+        
   .overlay {
     z-index: 1;
   }
@@ -41,7 +51,7 @@
         .bg-opacity-blur {
             -webkit-backdrop-filter: blur(5px);
              backdrop-filter: blur(5px);
-             background: rgb(52,58,64, 0.80);
+             background: rgb(52,58,64, 0.90);
         }
 
         #navbar {
