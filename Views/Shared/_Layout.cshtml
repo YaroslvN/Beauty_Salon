@@ -8,72 +8,11 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Beauty_Salon.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .card-placeholder {
-            background-color: #e9ecef;
-            height: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #6c757d;
-        }
-
-        .hover-effect:hover {
-            transform: scale(1.05);
-            transition: 0.3s;
-        }
-
-      .banner {
-        height: 600px;
-        position: relative;
-        overflow: hidden;
-        background: url(/images/products/product_6.jpg);
-        background-size: cover;
-        }
-
-        video {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-        
-  .overlay {
-    z-index: 1;
-  }
-  .container {
-    z-index: 2; /* Содержимое должно быть выше overlay */
-  }
-
-  /* section {
-    height: 100vh;
-  } */
-
-        .bg-opacity-blur {
-            -webkit-backdrop-filter: blur(5px);
-             backdrop-filter: blur(5px);
-             background: rgb(52,58,64, 0.90);
-        }
-
-        #navbar {
-            position: fixed; /* Зафиксируем меню */
-            top: 0; /* Прижмем к верху */
-            width: 100%; /* Растянем на всю ширину */
-            z-index: 1000;
-            transition: top 0.3s; /* Эффект трансформации при выдвижении вниз (и вверх) */
-        }
-
-        body{
-             padding: 0;
-             margin: 0;
-             padding-top: 70px;
-        }
-
-    </style>
 </head>
-<body>
+<body class="vh-100">
     <header class="bg-opacity-blur text-white py-3" id="navbar">
         <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="h3">Логотип</h1>
+            <h1 class="h3">Beauty Salon</h1>
             <nav>
                 <ul class="nav">
                     <li class="nav-item dropdown">
@@ -89,13 +28,56 @@
             </nav>
         </div>
     </header>
-    <div class="container">
+    <div class="container>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer" style="position: relative;">
+                <section class="contact-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Свяжитесь с нами</h2>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start">
+            <!-- Контактная информация -->
+            <div class="contact-info mb-4 mb-md-0">
+                <h4>Контактные данные</h4>
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-center mb-3">
+                        <i class="fa fa-map-marker-alt me-3 text-primary"></i>
+                        <span>г. Москва, ул. Примерная, 15</span>
+                    </li>
+                    <li class="d-flex align-items-center mb-3">
+                        <i class="fa fa-phone me-3 text-primary"></i>
+                        <span><a href="tel:+74951234567" class="text-decoration-none">+7 (495) 123-45-67</a></span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <i class="fa fa-envelope me-3 text-primary"></i>
+                        <span><a href="mailto:info@cosmetolit.ru" class="text-decoration-none">info@cosmetolit.ru</a></span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Социальные сети -->
+            <div class="social-media">
+                <h4>Мы в социальных сетях</h4>
+                <div class="d-flex gap-3">
+                    <a href="https://facebook.com" class="d-flex justify-content-center align-items-center btn btn-outline-primary">
+                        <i class="fa fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com" class="d-flex justify-content-center align-items-center btn btn-outline-danger">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="https://vk.com" class="d-flex justify-content-center align-items-center btn btn-outline-info">
+                        <i class="fa fa-vk"></i>
+                    </a>
+                    <a href="https://twitter.com" class="d-flex justify-content-center align-items-center btn btn-outline-primary">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         <div class="container">
             &copy; 2025 - Beauty_Salon - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

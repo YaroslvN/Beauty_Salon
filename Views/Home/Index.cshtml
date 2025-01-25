@@ -4,30 +4,10 @@
 
 <main id="index" class="container py-4">
 
-@* <section class="mb-4">
-  <div class=" banner gradient-custom_3 d-flex flex-column flex-md-row align-items-center">
-    <!-- Левая часть: Текст -->
-    <div class="banner-content text-center text-md-start p-4">
-      <h1 class="display-5 fw-bold text-white">Косметология для вашей красоты</h1>
-      <p class="lead mt-3 text-white">
-        Откройте новые горизонты ухода за кожей. Лучшие технологии и косметические процедуры для вас!
-      </p>
-      <div class="mt-4">
-        <a href="#services" class="btn btn-primary btn-lg me-3">Наши услуги</a>
-        <a href="#contact" class="btn btn-outline-dark btn-lg">Связаться с нами</a>
-      </div>
-    </div>
-    <!-- правая часть: Фото -->
-    <div class="banner-content text-center  p-4">
-      <img src="...">
-    </div>
-  </div>
-</section> *@
-
 <section class="mb-4">
-  <div class=" banner d-flex flex-column flex-md-row align-items-center">
+  <div class=" banner justify-content-center d-flex justify-content-center flex-column flex-md-row align-items-center">
     <video playsinline autoplay muted loop poster="cake.jpg">
-    <source src="/images/products/bannerBackground.mp4" type="video/webm">
+    <source src="/images/bannerBackground-_1_.webm" type="video/webm">
     Your browser does not support the video tag.
 </video>
     <div class="banner-content text-center text-md-start p-4">
@@ -36,23 +16,16 @@
         Откройте новые горизонты ухода за кожей. Лучшие технологии и косметические процедуры для вас!
       </p>
       <div class="mt-4">
-        <a href="#services" class="btn btn-primary btn-lg me-3">Наши услуги</a>
-        <a href="#contact" class="btn btn-outline-dark btn-lg">Связаться с нами</a>
+        <a class="btn btn-primary btn-lg me-3">Наши услуги</a>
+        <a class="btn btn-outline-light btn-lg" asp-area="" asp-controller="About" asp-action="Index">Связаться с нами</a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="video-wrapper">
-  <video playsinline autoplay muted loop poster="cake.jpg">
-    <source src="my-css-video-background.webm" type="video/webm">
-    Your browser does not support the video tag.
-  </video>
-</div>
-
  <section class="mb-4">
  <h2>Новости</h2>
-    <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel" data-interval="20000" >
+    <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel" data-interval="5000" >
       <!-- Индикаторы -->
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

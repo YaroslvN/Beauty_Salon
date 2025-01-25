@@ -91,3 +91,65 @@ img {
   height: auto;
   z-index: 0;
 }
+
+.card-placeholder {
+  background-color: #e9ecef;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6c757d;
+}
+
+.hover-effect:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.banner {
+height: 600px;
+position: relative;
+overflow: hidden;
+background-size: cover;
+}
+
+video {
+position: absolute;
+z-index:-1;
+}
+
+.overlay {
+z-index: 1;
+}
+.container {
+z-index: 2; /* Содержимое должно быть выше overlay */
+}
+
+/* section {
+height: 100vh;
+} */
+
+.bg-opacity-blur {
+  -webkit-backdrop-filter: blur(5px);
+   backdrop-filter: blur(5px);
+   background: rgb(52,58,64, 0.90);
+}
+
+#navbar {
+  position: fixed; /* Зафиксируем меню */
+  top: 0; /* Прижмем к верху */
+  width: 100%; /* Растянем на всю ширину */
+  z-index: 1000;
+  transition: top 0.3s; /* Эффект трансформации при выдвижении вниз (и вверх) */
+}
+
+body{
+   padding: 0;
+   margin: 0;
+   padding-top: 70px;
+}
+
+.card-info-scroll {
+  max-height: 200px; 
+  overflow: scroll; 
+}
